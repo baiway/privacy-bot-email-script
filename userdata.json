@@ -1,0 +1,14 @@
+{
+  "firstname": "Joe",
+  "lastname": "Bloggs", 
+  "email": "joe.bloggs@yahoo.com",
+  "full_address": "221B Baker Street",
+  "city": "London",
+  "county": "Greater London",
+  "postcode": "NW1 6XE",
+  "country": "United Kingdom",
+  "dob": "1st January 1995",
+  "age": "28",
+  "phone_num": "07893 284018",
+  "cc_last4": "2910"
+}
