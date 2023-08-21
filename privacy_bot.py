@@ -1,4 +1,5 @@
 import json
+import pickle
 import pandas as pd
 import smtplib
 from email.message import EmailMessage
@@ -136,24 +137,19 @@ def send_emails(services_map, username, password, userdata="userdata.json",
                 server.login(username, password)
             except smtplib.SMTPServerDisconnected:
                 print("Connection closed unexpectedly. Retrying in 5 minutes...")
-                print("Omit from next run:", omit)
+                with open("omit.pickle", "wb") as f:
+                    pickle.dump(omit, f)
                 time.sleep(300)
                 send_emails(services_map, username, password, 
                             userdata="userdata.json", omit=omit)
-
+                
             try:
                 server.send_message(msg)
                 print("Email sent to:", service)
                 omit.append(service)
 
             except Exception as error_message:
-                print("Email failed to send to:", service)
-                unsuccessful[service] = [broker_email, error_message]
-    
-    with open("sent_emails.json", "w") as f:
-        json.dump(successful, f)
-    with open("unsent_emails.json", "w") as f:
-        json.dump(unsuccessful, f)
+                print(f"Email failed to send to: {service} \n {error_message}")
 
 def get_login_credentials() -> (str, str):
     username = input("Username: ")
@@ -172,7 +168,8 @@ if __name__ == "__main__":
     username, password = get_login_credentials()
     services = csv_to_map(service_list="services_list_06May2021.csv", 
                           subset="all")
-    omit = []
+    with open("omit.pickle", "rb") as f:
+        omit = pickle.load(f)
     send_emails(services, username, password, userdata="userdata.json",
                 omit=omit)
    
