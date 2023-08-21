@@ -172,7 +172,7 @@ if __name__ == "__main__":
     username, password = get_login_credentials()
     services = csv_to_map(service_list="services_list_06May2021.csv", 
                           subset="all")
-    omit = ['180bytwo', '33across', '33mileradius', '360mediadirect', '4cinsights', '700credit', 'academixdirect', 'accudata', 'accuity', 'acxiom', 'adastradata', 'adcolony', 'addresses', 'admarketplace', 'adrearubinmarketing', 'adstra', 'advantagecredit', 'advantagesolutions', 'affinitysolutions', 'allantgroup', 'alliantcooperativedatasolutions', 'allpeople', 'allwebleads', 'amobee', 'amrent', 'analyticsiq', 'ancestry', 'anchorcomputer', 'andrewswharton', 'anywho', 'apollointeractive', 'apolloio', 'archives', 'aristotleinternational', 'arity', 'arivify', 'aslmarketing', 'audienceacuity', 'audiencerateltd', 'audientcompany', 'automotivemastermind', 'babelstreet', 'backgroundreport360', 'backgroundsonline', 'bbdirect', 'beenverified', 'belardiwong', 'bigbrookmedia', 'bigdbm', 'blackbaud', 'blackknightdata&analytics', 'blockshopper', 'bridg', 'brooksintegratedmarketing', 'bureauvandijkelectronicpublishingltd', 'buzzfile', 'calibrantdigital', 'carneydirectmarketing', 'catalina', 'censia', 'chartableholding', 'checkthem', 'cicmortgagecredit', 'cisionus', 'citydata', 'civisanalytics', 'claritas', 'clearbit', 'clearviewai', 'clickagy', 'clustrmaps', 'cogensia', 'cognism', 'compactinformationsystems', 'completemailinglists', 'comscore', 'contactout', 'contemporaryinformationcorp', 'conversant']
+    omit = []
     send_emails(services, username, password, userdata="userdata.json",
                 omit=omit)
    
