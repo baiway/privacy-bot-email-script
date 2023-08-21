@@ -3,6 +3,8 @@ This is a simple program inspired by [PrivacyBot](https://github.com/privacybot-
 
 Data broker details (including email addresses) can be found in `services_list_06May2021.csv`. This is taken straight from [PrivacyBot](https://github.com/privacybot-berkeley/privacybot). 
 
+There is a [PrivacyBot Demo](https://www.youtube.com/watch?v=B24EYAAXpAE) available on YouTube. This code has the same basic structure as PrivacyBot, so the video is well worth watching.
+
 ## Usage:
 Populate `userdata.json` with your details, then run:
 ```
