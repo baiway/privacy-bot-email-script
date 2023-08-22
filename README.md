@@ -1,7 +1,7 @@
 # Rudimentary PrivacyBot for Yahoo Mail
 This is a simple program inspired by [PrivacyBot](https://github.com/privacybot-berkeley/privacybot). It sends deletion requests to various data brokers and people search websites via email. PrivacyBot was written for Gmail; this is a rudimentary port for Yahoo (and Sky) Mail.  
 
-Data broker details (including email addresses) can be found in `services_list_06May2021.csv`. This is taken straight from [PrivacyBot](https://github.com/privacybot-berkeley/privacybot). 
+Data broker details (including email addresses) can be found in `services_list_06May2021.csv`. This is taken straight from [PrivacyBot](https://github.com/privacybot-berkeley/privacybot). **Please note that many of the services on this list are based in the US and do not collect data on people outside the US. You may wish to review the list yourself before sending emails to companies that do not hold any data on you.** The largest data brokers can be found on the [Big Ass Data Broker Opt-Out List](https://github.com/yaelwrites/Big-Ass-Data-Broker-Opt-Out-List).
 
 There is a [PrivacyBot Demo](https://www.youtube.com/watch?v=B24EYAAXpAE) available on YouTube. This code has the same basic structure as PrivacyBot, so the video is well worth watching.
 
